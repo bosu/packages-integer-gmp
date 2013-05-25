@@ -9,7 +9,7 @@ synopsis:       Integer library based on GMP
 description:
     This package contains an Integer library based on GMP.
 cabal-version:  >=1.6
-build-type: Configure
+build-type: Simple
 
 extra-source-files:
   cbits/float.c
@@ -30,7 +30,6 @@ Library {
     other-modules: GHC.Integer.Type
     extensions: CPP, MagicHash, UnboxedTuples, NoImplicitPrelude,
                 ForeignFunctionInterface, UnliftedFFITypes
-    c-sources: cbits/cbits.c
     -- We need to set the package name to integer-gmp
     -- (without a version number) as it's magic.
     ghc-options: -package-name integer-gmp
